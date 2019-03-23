@@ -12,6 +12,11 @@
 		E8B836A02154F31300BCDA76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B8369E2154F31300BCDA76 /* Main.storyboard */; };
 		E8B836A22154F31700BCDA76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B836A12154F31700BCDA76 /* Assets.xcassets */; };
 		E8B836A52154F31700BCDA76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B836A32154F31700BCDA76 /* LaunchScreen.storyboard */; };
+		E8B836AD2154FA0100BCDA76 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B836AC2154FA0100BCDA76 /* ViewController2.swift */; };
+		E8B836AF2155A1CA00BCDA76 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B836AE2155A1CA00BCDA76 /* ViewController3.swift */; };
+		E8B836B12155A82A00BCDA76 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B836B02155A82A00BCDA76 /* ViewController4.swift */; };
+		E8B836B32155AE0E00BCDA76 /* ViewController5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B836B22155AE0E00BCDA76 /* ViewController5.swift */; };
+		E8B94C3721584F87001EA4E0 /* ViewControllerEn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B94C3621584F87001EA4E0 /* ViewControllerEn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		E8B836A12154F31700BCDA76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B836A42154F31700BCDA76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B836A62154F31700BCDA76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8B836AC2154FA0100BCDA76 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		E8B836AE2155A1CA00BCDA76 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
+		E8B836B02155A82A00BCDA76 /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		E8B836B22155AE0E00BCDA76 /* ViewController5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController5.swift; sourceTree = "<group>"; };
+		E8B94C3621584F87001EA4E0 /* ViewControllerEn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +66,13 @@
 			children = (
 				E8B8369A2154F31300BCDA76 /* AppDelegate.swift */,
 				E8B8369C2154F31300BCDA76 /* ViewController.swift */,
+				E8B836AC2154FA0100BCDA76 /* ViewController2.swift */,
+				E8B836AE2155A1CA00BCDA76 /* ViewController3.swift */,
+				E8B836B02155A82A00BCDA76 /* ViewController4.swift */,
+				E8B836B22155AE0E00BCDA76 /* ViewController5.swift */,
 				E8B8369E2154F31300BCDA76 /* Main.storyboard */,
 				E8B836A12154F31700BCDA76 /* Assets.xcassets */,
+				E8B94C3621584F87001EA4E0 /* ViewControllerEn.swift */,
 				E8B836A32154F31700BCDA76 /* LaunchScreen.storyboard */,
 				E8B836A62154F31700BCDA76 /* Info.plist */,
 			);
@@ -137,6 +152,11 @@
 			files = (
 				E8B8369D2154F31300BCDA76 /* ViewController.swift in Sources */,
 				E8B8369B2154F31300BCDA76 /* AppDelegate.swift in Sources */,
+				E8B836AF2155A1CA00BCDA76 /* ViewController3.swift in Sources */,
+				E8B836AD2154FA0100BCDA76 /* ViewController2.swift in Sources */,
+				E8B836B32155AE0E00BCDA76 /* ViewController5.swift in Sources */,
+				E8B836B12155A82A00BCDA76 /* ViewController4.swift in Sources */,
+				E8B94C3721584F87001EA4E0 /* ViewControllerEn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +301,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z95AL8VW9Y;
 				INFOPLIST_FILE = Car_Price/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +320,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z95AL8VW9Y;
 				INFOPLIST_FILE = Car_Price/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

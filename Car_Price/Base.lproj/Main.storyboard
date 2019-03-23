@@ -1,24 +1,814 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="YTY-Wo-wgo">
+            <objects>
+                <viewController id="6xI-gG-wQm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="45S-5O-Erb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7Y-0o-6Gp">
+                                <rect key="frame" x="129" y="148" width="103" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="اللغه العربيه"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="M0G-sc-K41"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6A-Kq-nTe">
+                                <rect key="frame" x="129" y="285" width="103" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="English"/>
+                                <connections>
+                                    <segue destination="wZF-fc-Lct" kind="show" id="RtO-ce-d9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TZf-4U-8K2"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SOH-7l-Yoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2620" y="-106.59670164917542"/>
+        </scene>
+        <!--View Controller En-->
+        <scene sceneID="b8K-IJ-fvM">
+            <objects>
+                <viewController id="wZF-fc-Lct" customClass="ViewControllerEn" customModule="Car_Price" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QjL-Fw-BSS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bO8-lO-6by">
+                                <rect key="frame" x="0.0" y="83" width="320" height="437"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wZF-fc-Lct" id="RAc-qe-24W"/>
+                                    <outlet property="delegate" destination="wZF-fc-Lct" id="rjl-dT-Dhs"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car Type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50E-54-k1k">
+                                <rect key="frame" x="16" y="528" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgM-bw-yPU">
+                                <rect key="frame" x="102" y="528" width="257" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zlh-MN-H9o"/>
+                    </view>
+                    <connections>
+                        <outlet property="carpicker" destination="bO8-lO-6by" id="som-qL-YGU"/>
+                        <outlet property="cartype" destination="wgM-bw-yPU" id="4pK-tm-ejD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zRu-f8-Nny" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1687.2" y="361.16941529235385"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Car_Price" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpS-fc-kkj">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="نوع السياره" id="AAq-mJ-ERo">
+                                        <barButtonItem key="leftBarButtonItem" title="رجوع" id="04u-Yf-PDb">
+                                            <connections>
+                                                <action selector="backbu:" destination="BYZ-38-t0r" id="v8A-D1-yEh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="التالي" id="N7E-FZ-k1n">
+                                            <connections>
+                                                <action selector="carbutton:" destination="BYZ-38-t0r" id="XY4-sq-cJf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YAG-vk-04V">
+                                <rect key="frame" x="8" y="84" width="304" height="284"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="u6D-nT-ZY1"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RGn-Un-0NB"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نوع السياره: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMM-AF-3HI" userLabel="نوع السياره:">
+                                <rect key="frame" x="204.5" y="431" width="114.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ODn-mj-N8H">
+                                <rect key="frame" x="107" y="335" width="106" height="16"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ia6-yl-N7f">
+                                <rect key="frame" x="76" y="687" width="231" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YAG-vk-04V" secondAttribute="trailing" constant="8" id="1n6-7c-hnH"/>
+                            <constraint firstItem="nMM-AF-3HI" firstAttribute="top" secondItem="ODn-mj-N8H" secondAttribute="bottom" constant="80" id="6Ti-8f-fhg">
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nMM-AF-3HI" secondAttribute="bottom" constant="20" id="7dM-v0-eZc"/>
+                            <constraint firstItem="nMM-AF-3HI" firstAttribute="leading" secondItem="ia6-yl-N7f" secondAttribute="trailing" constant="10" id="8hv-2a-yzf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ia6-yl-N7f" secondAttribute="bottom" constant="20" id="Abl-9Y-VvH"/>
+                            <constraint firstItem="kpS-fc-kkj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CPS-fH-ReB"/>
+                            <constraint firstItem="kpS-fc-kkj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GDi-Ot-jw1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ODn-mj-N8H" secondAttribute="trailing" constant="107" id="Gev-V1-MeR">
+                                <variation key="heightClass=regular-widthClass=regular" constant="214"/>
+                            </constraint>
+                            <constraint firstItem="kpS-fc-kkj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Hnd-S2-Bbv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nMM-AF-3HI" secondAttribute="trailing" constant="1" id="ILD-zQ-vCC"/>
+                            <constraint firstItem="ODn-mj-N8H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="Ze1-bd-8Q0">
+                                <variation key="heightClass=regular-widthClass=regular" constant="214"/>
+                            </constraint>
+                            <constraint firstItem="YAG-vk-04V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aW2-Wz-aQp"/>
+                            <constraint firstItem="ia6-yl-N7f" firstAttribute="top" secondItem="ODn-mj-N8H" secondAttribute="bottom" constant="80" id="aWN-eo-oMu">
+                                <variation key="heightClass=regular-widthClass=regular" constant="180"/>
+                            </constraint>
+                            <constraint firstItem="YAG-vk-04V" firstAttribute="top" secondItem="kpS-fc-kkj" secondAttribute="bottom" constant="20" id="ggk-1f-Qee"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="car_type" destination="YAG-vk-04V" id="M44-VH-GSL"/>
+                        <outlet property="carlable" destination="ia6-yl-N7f" id="xQU-a1-fGA"/>
+                        <outlet property="imageview" destination="ODn-mj-N8H" id="CE6-Uw-cw3"/>
+                        <segue destination="zVc-qG-EYG" kind="show" identifier="segue" id="cX0-5L-yHS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1743.4782608695652" y="-516.84782608695662"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="AeV-hh-bru">
+            <objects>
+                <viewController id="zVc-qG-EYG" customClass="ViewController2" customModule="Car_Price" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BlI-ah-ryG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fyP-3o-PH2">
+                                <rect key="frame" x="8" y="84" width="304" height="284"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zVc-qG-EYG" id="Fel-kc-beJ"/>
+                                    <outlet property="delegate" destination="zVc-qG-EYG" id="Rev-tr-w9X"/>
+                                </connections>
+                            </pickerView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xqu-Cu-NG0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="فئة السياره" id="Nvv-Y3-MWH">
+                                        <barButtonItem key="leftBarButtonItem" title="رجوع" id="fle-Dx-PUV">
+                                            <connections>
+                                                <action selector="backbutton:" destination="zVc-qG-EYG" id="cPx-Jo-8D2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="التالي" id="Hlz-17-EIM">
+                                            <connections>
+                                                <action selector="carbutton:" destination="zVc-qG-EYG" id="EbZ-Nm-neF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="نوع السياره:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quJ-Zx-jpf">
+                                <rect key="frame" x="157" y="615" width="246" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="فئة السياره:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xn-tB-dCA">
+                                <rect key="frame" x="159" y="674" width="233" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CXw-iI-l4k">
+                                <rect key="frame" x="107" y="369" width="200" height="181"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4T-qV-ThU">
+                                <rect key="frame" x="46" y="671" width="243" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hx-Y0-U6N">
+                                <rect key="frame" x="46" y="619" width="242" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xqu-Cu-NG0" firstAttribute="top" secondItem="mex-2E-m9i" secondAttribute="top" id="1CV-z3-XgK"/>
+                            <constraint firstItem="7Xn-tB-dCA" firstAttribute="leading" secondItem="c4T-qV-ThU" secondAttribute="trailing" constant="10" id="1cb-qf-Hff"/>
+                            <constraint firstItem="quJ-Zx-jpf" firstAttribute="top" secondItem="CXw-iI-l4k" secondAttribute="bottom" constant="70" id="2v6-uA-MVv">
+                                <variation key="heightClass=regular-widthClass=regular" constant="170"/>
+                            </constraint>
+                            <constraint firstItem="fyP-3o-PH2" firstAttribute="leading" secondItem="mex-2E-m9i" secondAttribute="leading" constant="8" id="4Kf-VW-hHb"/>
+                            <constraint firstItem="4Hx-Y0-U6N" firstAttribute="top" secondItem="CXw-iI-l4k" secondAttribute="bottom" constant="70" id="9HN-Ri-H6H">
+                                <variation key="heightClass=regular-widthClass=regular" constant="170"/>
+                            </constraint>
+                            <constraint firstItem="7Xn-tB-dCA" firstAttribute="top" secondItem="quJ-Zx-jpf" secondAttribute="bottom" constant="10" id="9f6-9j-crD"/>
+                            <constraint firstItem="quJ-Zx-jpf" firstAttribute="leading" secondItem="4Hx-Y0-U6N" secondAttribute="trailing" constant="10" id="AxX-II-j9c"/>
+                            <constraint firstItem="Xqu-Cu-NG0" firstAttribute="leading" secondItem="mex-2E-m9i" secondAttribute="leading" id="BMq-Y6-JbL"/>
+                            <constraint firstItem="CXw-iI-l4k" firstAttribute="leading" secondItem="mex-2E-m9i" secondAttribute="leading" constant="107" id="BiK-nm-eHM">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="mex-2E-m9i" firstAttribute="trailing" secondItem="7Xn-tB-dCA" secondAttribute="trailing" constant="1" id="E6y-ad-deH"/>
+                            <constraint firstItem="mex-2E-m9i" firstAttribute="bottom" secondItem="7Xn-tB-dCA" secondAttribute="bottom" constant="20" id="L2T-jz-0Gz"/>
+                            <constraint firstItem="mex-2E-m9i" firstAttribute="trailing" secondItem="fyP-3o-PH2" secondAttribute="trailing" constant="8" id="T1q-xu-rCi"/>
+                            <constraint firstItem="mex-2E-m9i" firstAttribute="bottom" secondItem="c4T-qV-ThU" secondAttribute="bottom" constant="20" id="XYj-kv-16W"/>
+                            <constraint firstItem="mex-2E-m9i" firstAttribute="trailing" secondItem="quJ-Zx-jpf" secondAttribute="trailing" constant="1" id="f0F-8F-QZl"/>
+                            <constraint firstItem="fyP-3o-PH2" firstAttribute="top" secondItem="Xqu-Cu-NG0" secondAttribute="bottom" constant="20" id="fwL-sG-rUh"/>
+                            <constraint firstItem="mex-2E-m9i" firstAttribute="trailing" secondItem="CXw-iI-l4k" secondAttribute="trailing" constant="107" id="j9o-xe-PsS">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="c4T-qV-ThU" firstAttribute="top" secondItem="4Hx-Y0-U6N" secondAttribute="bottom" constant="10" id="sbB-ge-tLx"/>
+                            <constraint firstItem="Xqu-Cu-NG0" firstAttribute="trailing" secondItem="mex-2E-m9i" secondAttribute="trailing" id="wgj-UV-Doa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mex-2E-m9i"/>
+                    </view>
+                    <connections>
+                        <outlet property="carType" destination="4Hx-Y0-U6N" id="BXk-fO-fGj"/>
+                        <outlet property="car_model" destination="fyP-3o-PH2" id="hgO-SO-Vbk"/>
+                        <outlet property="carlogoimage" destination="CXw-iI-l4k" id="MnE-jR-5YP"/>
+                        <outlet property="model" destination="c4T-qV-ThU" id="23E-gz-FvL"/>
+                        <segue destination="GRQ-1j-VCk" kind="show" identifier="segue2" id="r5L-cu-Vhy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PtO-ig-grg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1043.5546875" y="-516.98389458272322"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="Rzw-eA-gyj">
+            <objects>
+                <viewController id="GRQ-1j-VCk" customClass="ViewController3" customModule="Car_Price" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gn5-UH-5n4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqi-81-zhC">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="سنة الصنع" id="5UA-ey-jLc">
+                                        <barButtonItem key="leftBarButtonItem" title="رجوع" id="WWM-QN-jTO">
+                                            <connections>
+                                                <action selector="Backbu:" destination="GRQ-1j-VCk" id="0uo-Ag-jPz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="التالي" id="ngK-4q-gbw">
+                                            <connections>
+                                                <action selector="Nexttomileage:" destination="GRQ-1j-VCk" id="4bZ-aQ-GYd"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5P4-73-NWb">
+                                <rect key="frame" x="8" y="84" width="304" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GRQ-1j-VCk" id="lNd-gK-yOb"/>
+                                    <outlet property="delegate" destination="GRQ-1j-VCk" id="WHe-Gv-0gG"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="نوع السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-v4-mzP">
+                                <rect key="frame" x="295" y="610" width="109" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="فئة السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZr-GW-irF">
+                                <rect key="frame" x="300.33333333333331" y="648.66666666666663" width="103.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="سنة الصنع:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INH-N2-NGl">
+                                <rect key="frame" x="302.33333333333331" y="687.33333333333326" width="101.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asr-fg-ELL">
+                                <rect key="frame" x="39" y="686" width="253" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="r9T-Jw-Qoe">
+                                <rect key="frame" x="107" y="301" width="106" height="16"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtd-Fy-DVk">
+                                <rect key="frame" x="39" y="625" width="248" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Atg-rt-LaC">
+                                <rect key="frame" x="39" y="657" width="251" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5P4-73-NWb" firstAttribute="leading" secondItem="oju-JQ-QwX" secondAttribute="leading" constant="8" id="0P7-eh-iL0"/>
+                            <constraint firstItem="Nqi-81-zhC" firstAttribute="top" secondItem="oju-JQ-QwX" secondAttribute="top" id="4CF-Ua-Tw5"/>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="bottom" secondItem="asr-fg-ELL" secondAttribute="bottom" constant="20" id="7kU-ot-x6b"/>
+                            <constraint firstItem="INH-N2-NGl" firstAttribute="leading" secondItem="asr-fg-ELL" secondAttribute="trailing" constant="10" id="9hG-5G-kKh"/>
+                            <constraint firstItem="7eF-v4-mzP" firstAttribute="leading" secondItem="Jtd-Fy-DVk" secondAttribute="trailing" constant="10" id="AJe-Q6-BBN"/>
+                            <constraint firstItem="Jtd-Fy-DVk" firstAttribute="top" secondItem="r9T-Jw-Qoe" secondAttribute="bottom" constant="60" id="ARu-pv-SBr">
+                                <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                            </constraint>
+                            <constraint firstItem="r9T-Jw-Qoe" firstAttribute="leading" secondItem="oju-JQ-QwX" secondAttribute="leading" constant="107" id="BeQ-n5-nP7">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="trailing" secondItem="r9T-Jw-Qoe" secondAttribute="trailing" constant="107" id="Bgb-Dh-AfZ">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="oZr-GW-irF" firstAttribute="leading" secondItem="Atg-rt-LaC" secondAttribute="trailing" constant="10" id="C43-Yb-Nwl"/>
+                            <constraint firstItem="asr-fg-ELL" firstAttribute="top" secondItem="Atg-rt-LaC" secondAttribute="bottom" constant="10" id="CJa-JK-Bmf"/>
+                            <constraint firstItem="oZr-GW-irF" firstAttribute="top" secondItem="7eF-v4-mzP" secondAttribute="bottom" constant="10" id="Cx2-VK-5Wq"/>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="trailing" secondItem="7eF-v4-mzP" secondAttribute="trailing" constant="10" id="F3f-ff-szd"/>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="trailing" secondItem="5P4-73-NWb" secondAttribute="trailing" constant="8" id="GKQ-D4-js4"/>
+                            <constraint firstItem="Nqi-81-zhC" firstAttribute="leading" secondItem="oju-JQ-QwX" secondAttribute="leading" id="OSI-AU-RvF"/>
+                            <constraint firstItem="Atg-rt-LaC" firstAttribute="top" secondItem="Jtd-Fy-DVk" secondAttribute="bottom" constant="10" id="Rn4-6S-qoE"/>
+                            <constraint firstItem="5P4-73-NWb" firstAttribute="top" secondItem="Nqi-81-zhC" secondAttribute="bottom" constant="20" id="Tbh-UZ-hVF"/>
+                            <constraint firstItem="INH-N2-NGl" firstAttribute="top" secondItem="oZr-GW-irF" secondAttribute="bottom" constant="10" id="Umo-cm-55u"/>
+                            <constraint firstItem="r9T-Jw-Qoe" firstAttribute="top" secondItem="5P4-73-NWb" secondAttribute="bottom" constant="1" id="Z8s-qT-2tx"/>
+                            <constraint firstItem="Nqi-81-zhC" firstAttribute="trailing" secondItem="oju-JQ-QwX" secondAttribute="trailing" id="eJy-3n-g4f"/>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="trailing" secondItem="INH-N2-NGl" secondAttribute="trailing" constant="10" id="eeK-iZ-gza"/>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="trailing" secondItem="oZr-GW-irF" secondAttribute="trailing" constant="10" id="neQ-ns-Nhl"/>
+                            <constraint firstItem="7eF-v4-mzP" firstAttribute="top" secondItem="r9T-Jw-Qoe" secondAttribute="bottom" constant="90" id="tan-4y-PIQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                            </constraint>
+                            <constraint firstItem="oju-JQ-QwX" firstAttribute="bottom" secondItem="INH-N2-NGl" secondAttribute="bottom" constant="20" id="y8A-Jv-Wcd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oju-JQ-QwX"/>
+                    </view>
+                    <connections>
+                        <outlet property="carimage" destination="r9T-Jw-Qoe" id="hxy-F5-q6p"/>
+                        <outlet property="carmodel" destination="Atg-rt-LaC" id="h2g-u0-mpY"/>
+                        <outlet property="cartype" destination="Jtd-Fy-DVk" id="g28-Ht-kkc"/>
+                        <outlet property="caryear" destination="asr-fg-ELL" id="ZsH-7b-SQM"/>
+                        <segue destination="oWh-xq-lye" kind="show" identifier="segue3" id="UxO-Bw-fcm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DG9-rO-Zhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.43478260869568" y="-516.84782608695662"/>
+        </scene>
+        <!--View Controller4-->
+        <scene sceneID="kLq-gJ-4zQ">
+            <objects>
+                <viewController id="oWh-xq-lye" customClass="ViewController4" customModule="Car_Price" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phT-bv-Lfa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZD-LS-bsI">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="عداد السياره" id="2oD-Pm-T7t">
+                                        <barButtonItem key="leftBarButtonItem" title="رجوع" id="Okn-Zd-b2R">
+                                            <connections>
+                                                <action selector="backbutton:" destination="oWh-xq-lye" id="OLh-wd-cuo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="السعر" id="R8J-A4-Rd6">
+                                            <connections>
+                                                <action selector="getprice:" destination="oWh-xq-lye" id="9LK-ed-3G5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MXX-cC-idj">
+                                <rect key="frame" x="8" y="84" width="304" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="oWh-xq-lye" id="e9q-R1-WfS"/>
+                                    <outlet property="delegate" destination="oWh-xq-lye" id="0Qp-5j-AKd"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="N2i-px-2em">
+                                <rect key="frame" x="107" y="301" width="106" height="16"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="نوع السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fat-9z-kQs">
+                                <rect key="frame" x="304" y="571.33333333333326" width="109" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="فئة السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyJ-v1-Nc4">
+                                <rect key="frame" x="309.33333333333331" y="610" width="103.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="سنة الصنع:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-8X-0T5">
+                                <rect key="frame" x="311.33333333333331" y="648.66666666666663" width="101.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="عداد السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-qZ-CCt">
+                                <rect key="frame" x="294.33333333333331" y="687.33333333333326" width="118.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8a-c8-Gfb">
+                                <rect key="frame" x="45" y="570" width="249" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2UH-xA-3m6">
+                                <rect key="frame" x="46" y="648" width="253" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mtk-WA-qCY">
+                                <rect key="frame" x="45" y="687" width="239" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EZ-xp-45V">
+                                <rect key="frame" x="54" y="610" width="245" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mtk-WA-qCY" firstAttribute="top" secondItem="2UH-xA-3m6" secondAttribute="bottom" constant="10" id="270-En-bh3"/>
+                            <constraint firstItem="fat-9z-kQs" firstAttribute="top" secondItem="N2i-px-2em" secondAttribute="bottom" constant="50" id="3op-MS-ggj">
+                                <variation key="heightClass=regular-widthClass=regular" constant="146"/>
+                            </constraint>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="trailing" secondItem="nyJ-v1-Nc4" secondAttribute="trailing" constant="1" id="4xg-zK-sDN"/>
+                            <constraint firstItem="z8a-c8-Gfb" firstAttribute="top" secondItem="N2i-px-2em" secondAttribute="bottom" constant="50" id="7Cr-Ue-WPc">
+                                <variation key="heightClass=regular-widthClass=regular" constant="145"/>
+                            </constraint>
+                            <constraint firstItem="W2q-qZ-CCt" firstAttribute="leading" secondItem="Mtk-WA-qCY" secondAttribute="trailing" constant="10" id="7ek-le-udq"/>
+                            <constraint firstItem="4ZD-LS-bsI" firstAttribute="top" secondItem="fjD-2f-ftX" secondAttribute="top" id="A8q-Yo-z4H"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="trailing" secondItem="MXX-cC-idj" secondAttribute="trailing" constant="8" id="Anq-w1-Lnp"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="trailing" secondItem="W2q-qZ-CCt" secondAttribute="trailing" constant="1" id="DxE-gx-rq3"/>
+                            <constraint firstItem="nyJ-v1-Nc4" firstAttribute="leading" secondItem="4EZ-xp-45V" secondAttribute="trailing" constant="10" id="GK7-T4-f0E"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="bottom" secondItem="Mtk-WA-qCY" secondAttribute="bottom" constant="20" id="HIY-1Y-w72"/>
+                            <constraint firstItem="MXX-cC-idj" firstAttribute="leading" secondItem="fjD-2f-ftX" secondAttribute="leading" constant="8" id="NrU-7g-GxD"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="trailing" secondItem="N2i-px-2em" secondAttribute="trailing" constant="107" id="Q6h-It-aXr">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="N2i-px-2em" firstAttribute="leading" secondItem="fjD-2f-ftX" secondAttribute="leading" constant="107" id="RIa-OG-NY2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="fat-9z-kQs" firstAttribute="leading" secondItem="z8a-c8-Gfb" secondAttribute="trailing" constant="10" id="RMi-Os-mHL"/>
+                            <constraint firstItem="4ZD-LS-bsI" firstAttribute="trailing" secondItem="fjD-2f-ftX" secondAttribute="trailing" id="TLX-Wz-u2H"/>
+                            <constraint firstItem="N5d-8X-0T5" firstAttribute="leading" secondItem="2UH-xA-3m6" secondAttribute="trailing" constant="10" id="VCe-jn-xi5"/>
+                            <constraint firstItem="4ZD-LS-bsI" firstAttribute="leading" secondItem="fjD-2f-ftX" secondAttribute="leading" id="ejh-2K-5DI"/>
+                            <constraint firstItem="2UH-xA-3m6" firstAttribute="top" secondItem="4EZ-xp-45V" secondAttribute="bottom" constant="10" id="eqh-da-2YN"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="bottom" secondItem="W2q-qZ-CCt" secondAttribute="bottom" constant="20" id="fGT-Nd-jhs"/>
+                            <constraint firstItem="4EZ-xp-45V" firstAttribute="top" secondItem="z8a-c8-Gfb" secondAttribute="bottom" constant="10" id="klu-xU-XOf"/>
+                            <constraint firstItem="N2i-px-2em" firstAttribute="top" secondItem="MXX-cC-idj" secondAttribute="bottom" constant="1" id="kqr-ZR-Rko">
+                                <variation key="heightClass=regular-widthClass=regular" constant="1"/>
+                            </constraint>
+                            <constraint firstItem="nyJ-v1-Nc4" firstAttribute="top" secondItem="fat-9z-kQs" secondAttribute="bottom" constant="10" id="l00-Gh-u11"/>
+                            <constraint firstItem="MXX-cC-idj" firstAttribute="top" secondItem="4ZD-LS-bsI" secondAttribute="bottom" constant="20" id="oAJ-UV-Xrg"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="trailing" secondItem="N5d-8X-0T5" secondAttribute="trailing" constant="1" id="r0K-KR-ca5"/>
+                            <constraint firstItem="W2q-qZ-CCt" firstAttribute="top" secondItem="N5d-8X-0T5" secondAttribute="bottom" constant="10" id="tF4-Dz-iXA"/>
+                            <constraint firstItem="N5d-8X-0T5" firstAttribute="top" secondItem="nyJ-v1-Nc4" secondAttribute="bottom" constant="10" id="y5y-Sd-JfB"/>
+                            <constraint firstItem="fjD-2f-ftX" firstAttribute="trailing" secondItem="fat-9z-kQs" secondAttribute="trailing" constant="1" id="y6Q-xa-QDX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fjD-2f-ftX"/>
+                    </view>
+                    <connections>
+                        <outlet property="carimage" destination="N2i-px-2em" id="mUf-HA-2DM"/>
+                        <outlet property="lacarmileage" destination="Mtk-WA-qCY" id="zbh-Iu-qBg"/>
+                        <outlet property="lacarmodel" destination="4EZ-xp-45V" id="Klw-q1-adb"/>
+                        <outlet property="lacaryear" destination="2UH-xA-3m6" id="BMm-Ag-887"/>
+                        <outlet property="lacarype" destination="z8a-c8-Gfb" id="bO6-kE-Bc3"/>
+                        <segue destination="5QM-ox-O4n" kind="show" identifier="segue4" id="cNH-ez-68N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKj-LM-efh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="501.44927536231887" y="-518.47826086956525"/>
+        </scene>
+        <!--View Controller5-->
+        <scene sceneID="2dK-x6-YaQ">
+            <objects>
+                <viewController id="5QM-ox-O4n" customClass="ViewController5" customModule="Car_Price" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="maO-RJ-TbL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fh4-48-B86">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="السعر" id="79c-Nv-Duk">
+                                        <barButtonItem key="leftBarButtonItem" title="الرجوع" id="SBf-jG-JCD">
+                                            <connections>
+                                                <action selector="backbutton:" destination="5QM-ox-O4n" id="569-b7-KMc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="ابدأ من جديد" id="Axj-x1-xa4">
+                                            <connections>
+                                                <action selector="startOver:" destination="5QM-ox-O4n" id="Zyz-Q2-a8h"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نوع السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbX-Pv-Iyg">
+                                <rect key="frame" x="210" y="144" width="109" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فئة السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4LD-BJ-NYb">
+                                <rect key="frame" x="215.5" y="188" width="103.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="سنة الصنع:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkU-YE-H4b">
+                                <rect key="frame" x="217" y="232" width="102" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عداد السياره:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksF-F7-wft">
+                                <rect key="frame" x="200" y="276" width="119" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.38079249199999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hhhhhh" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nH5-WD-Is4">
+                                <rect key="frame" x="120" y="144" width="80" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.24403453032864431" green="1" blue="0.28814269625249456" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jjjjjj" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRD-zH-Vdy">
+                                <rect key="frame" x="173.5" y="188" width="32" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.24403453032864431" green="1" blue="0.28814269625249456" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="uuuuu" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-uq-DPD">
+                                <rect key="frame" x="142" y="232" width="65" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.24403453032864431" green="1" blue="0.28814269625249456" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iiiiii" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbv-jp-bQG">
+                                <rect key="frame" x="158.5" y="276" width="31.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.24403453032864431" green="1" blue="0.28814269625249456" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeC-At-R66">
+                                <rect key="frame" x="34" y="512" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqf-La-hIe">
+                                <rect key="frame" x="9" y="567" width="397" height="132"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.18896246899999999" blue="0.13082399049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dRD-zH-Vdy" firstAttribute="top" secondItem="nH5-WD-Is4" secondAttribute="bottom" constant="15" id="3AO-7X-bYI"/>
+                            <constraint firstItem="fh4-48-B86" firstAttribute="trailing" secondItem="xW0-4t-iJR" secondAttribute="trailing" id="3D6-SM-eW7"/>
+                            <constraint firstItem="SkU-YE-H4b" firstAttribute="leading" secondItem="LsR-uq-DPD" secondAttribute="trailing" constant="10" id="3bC-fr-82k"/>
+                            <constraint firstItem="xW0-4t-iJR" firstAttribute="bottom" secondItem="gqf-La-hIe" secondAttribute="bottom" constant="50" id="HF7-0D-8f1"/>
+                            <constraint firstItem="fh4-48-B86" firstAttribute="leading" secondItem="xW0-4t-iJR" secondAttribute="leading" id="K5h-t9-p7V"/>
+                            <constraint firstItem="fh4-48-B86" firstAttribute="top" secondItem="xW0-4t-iJR" secondAttribute="top" id="KN3-Q1-gBW"/>
+                            <constraint firstItem="ksF-F7-wft" firstAttribute="top" secondItem="SkU-YE-H4b" secondAttribute="bottom" constant="15" id="Ljj-Cx-Wdw"/>
+                            <constraint firstItem="fh4-48-B86" firstAttribute="trailing" secondItem="xW0-4t-iJR" secondAttribute="trailing" id="Pjf-4I-mmP"/>
+                            <constraint firstItem="gqf-La-hIe" firstAttribute="leading" secondItem="xW0-4t-iJR" secondAttribute="leading" constant="35" id="RRG-Y5-SjS"/>
+                            <constraint firstItem="sbv-jp-bQG" firstAttribute="top" secondItem="LsR-uq-DPD" secondAttribute="bottom" constant="15" id="X7e-EY-YGl"/>
+                            <constraint firstItem="4LD-BJ-NYb" firstAttribute="top" secondItem="UbX-Pv-Iyg" secondAttribute="bottom" constant="15" id="X9S-Sz-xnR"/>
+                            <constraint firstItem="4LD-BJ-NYb" firstAttribute="leading" secondItem="dRD-zH-Vdy" secondAttribute="trailing" constant="10" id="Zok-6y-NNE"/>
+                            <constraint firstItem="xW0-4t-iJR" firstAttribute="trailing" secondItem="gqf-La-hIe" secondAttribute="trailing" constant="1" id="cPL-fZ-owR"/>
+                            <constraint firstItem="UbX-Pv-Iyg" firstAttribute="leading" secondItem="nH5-WD-Is4" secondAttribute="trailing" constant="10" id="gln-DD-2k1">
+                                <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="xW0-4t-iJR" firstAttribute="trailing" secondItem="SkU-YE-H4b" secondAttribute="trailing" constant="1" id="ikZ-Un-YnN"/>
+                            <constraint firstItem="UbX-Pv-Iyg" firstAttribute="top" secondItem="fh4-48-B86" secondAttribute="bottom" constant="80" id="k5S-Qi-yIT"/>
+                            <constraint firstItem="xW0-4t-iJR" firstAttribute="trailing" secondItem="UbX-Pv-Iyg" secondAttribute="trailing" constant="1" id="mAA-VE-F6l"/>
+                            <constraint firstItem="fh4-48-B86" firstAttribute="top" secondItem="xW0-4t-iJR" secondAttribute="top" id="mDn-aZ-GhG"/>
+                            <constraint firstItem="xW0-4t-iJR" firstAttribute="trailing" secondItem="ksF-F7-wft" secondAttribute="trailing" constant="1" id="mtv-d0-Fdi"/>
+                            <constraint firstItem="nH5-WD-Is4" firstAttribute="top" secondItem="fh4-48-B86" secondAttribute="bottom" constant="80" id="rQl-dZ-dn6"/>
+                            <constraint firstItem="SkU-YE-H4b" firstAttribute="top" secondItem="4LD-BJ-NYb" secondAttribute="bottom" constant="15" id="rWS-Sp-bBr"/>
+                            <constraint firstItem="ksF-F7-wft" firstAttribute="leading" secondItem="sbv-jp-bQG" secondAttribute="trailing" constant="10" id="tFc-ca-TWX"/>
+                            <constraint firstItem="LsR-uq-DPD" firstAttribute="top" secondItem="dRD-zH-Vdy" secondAttribute="bottom" constant="15" id="uj9-LO-aBk"/>
+                            <constraint firstItem="xW0-4t-iJR" firstAttribute="trailing" secondItem="4LD-BJ-NYb" secondAttribute="trailing" constant="1" id="xUP-sL-J4n"/>
+                            <constraint firstItem="fh4-48-B86" firstAttribute="leading" secondItem="xW0-4t-iJR" secondAttribute="leading" id="z7r-Sg-hTR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xW0-4t-iJR"/>
+                    </view>
+                    <connections>
+                        <outlet property="cartype" destination="nH5-WD-Is4" id="YCx-op-Ipv"/>
+                        <outlet property="ladate" destination="oeC-At-R66" id="GhW-Ry-TP6"/>
+                        <outlet property="mileage" destination="sbv-jp-bQG" id="PpR-Eh-Ie1"/>
+                        <outlet property="model" destination="dRD-zH-Vdy" id="Hxw-9D-lam"/>
+                        <outlet property="price" destination="gqf-La-hIe" id="NyN-4e-mba"/>
+                        <outlet property="year" destination="LsR-uq-DPD" id="gDQ-5g-XF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nm3-GJ-KnF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1278.2608695652175" y="-519.29347826086962"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="16" height="16"/>
+    </resources>
 </document>
